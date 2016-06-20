@@ -5,9 +5,9 @@
 def bayes_classifier(data_set, categories, vec):
     """
     贝叶斯分类器
-    :param data_set: 先验数据
-    :param categories: 种类
-    :param vec: 目标向量
+    :param data_set:先验数据
+    :param categories:种类
+    :param vec:目标向量
     :return:
     """
     result_p = 0
@@ -30,6 +30,10 @@ def bayes_classifier(data_set, categories, vec):
 
 if __name__ == '__main__':
     test_data = {}
-    test_data.setdefault('categories', {'bad': 4, 'good': 9})
-    test_data.setdefault('data_set', {'python': {'bad': 0, 'good': 6}, 'the': {'bad': 4, 'good': 3}})
+    test_data.setdefault('data_set', {
+        'python': {'bad': 0, 'good': 6},
+        'the': {'bad': 2, 'good': 3},
+        'money': {'bad': 3, 'good': 4}
+    })
+    test_data.setdefault('categories', {'bad': 5, 'good': 13})
     print(bayes_classifier(test_data['data_set'], test_data['categories'], ['the']))
