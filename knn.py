@@ -4,8 +4,6 @@ import numpy as np
 
 
 # K Nearest Neighbors algorithm
-
-
 def cal_distance(vec1, vec2):
     """
     calculate the Euclidean distance of vec1 and vec2
