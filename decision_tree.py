@@ -128,7 +128,26 @@ def create_branch(data_set, labels):
     return branch
 
 
+def classify(dt, labels, vec):
+    """
+    classify vector with decision tree
+    :param dt: decision tree
+    :param labels: feature labels
+    :param vec: vector
+    :return: category
+    """
+    key = dt.keys()[0]
+    sub_tree = dt[key]
+    key_index = labels.index(key)
+    if type(sub_tree[vec[key_index]]).__name__ != 'dict':
+        return sub_tree[vec[key_index]]
+    else:
+        return classify(sub_tree[vec[key_index]], labels, vec)
+
+
 if __name__ == '__main__':
     # test code
     _data_set, _labels = create_data_set()
-    print(create_branch(_data_set, _labels))
+    _dt = create_branch(_data_set, _labels)
+    _category = classify(_dt, _labels, [0, 0])
+    print(_category)
