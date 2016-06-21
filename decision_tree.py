@@ -112,15 +112,19 @@ def create_branch(data_set, labels):
     best_feature = calc_best_feature(data_set)
 
     branch = {labels[best_feature]: {}}
-    # labels for next level, best feature removed
+    # labels for next level, label of best feature removed
     labels_next_level = labels[:best_feature] + labels[best_feature + 1:]
+    # storing handled values
     values = []
     # create children branches
     for vec in data_set:
+        # if value not handled
         if vec[best_feature] not in values:
             values.append(vec[best_feature])
+            # add branches to the tree
             branch[labels[best_feature]][vec[best_feature]] = create_branch(
                 split_data_set(data_set, best_feature, vec[best_feature]), labels_next_level)
+    # return the branch
     return branch
 
 
