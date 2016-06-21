@@ -1,2 +1,2 @@
 # ml
-Some algorithm in Machine Learning.
+Some algorithms in Machine Learning.
