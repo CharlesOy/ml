@@ -9,8 +9,8 @@ import math
 
 def create_data_set():
     """
-    create training data set
-    :return:
+    create training data set and labels
+    :return: data set, labels
     """
     return [[1, 1, 0], [1, 1, 0], [1, 0, 0], [0, 0, 1], [0, 0, 1], [2, 2, 2], [2, 1, 1]], [0, 1]
 
