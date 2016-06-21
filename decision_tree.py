@@ -125,5 +125,6 @@ def create_branch(data_set, labels):
 
 
 if __name__ == '__main__':
+    # test code
     _data_set, _labels = create_data_set()
     print(create_branch(_data_set, _labels))
