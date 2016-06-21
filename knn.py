@@ -53,7 +53,7 @@ def knn_classify(vec, data_set, labels, k):
 def most_common(lst):
     """
     get the most common element in a list
-    http://stackoverflow.com/questions/1518522/python-most-common-element-in-a-list
+    http://stackoverflow.com/a/1518632/5772561
     :param lst:
     :return:
     """
