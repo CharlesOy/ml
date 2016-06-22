@@ -1,4 +1,9 @@
 # -*- coding: utf-8 -*-
+"""
+Naive Bayes Classifier
+by Charles Ouyang
+2016.06.22
+"""
 
 
 def bayes_classifier(data_set, categories, vec):
