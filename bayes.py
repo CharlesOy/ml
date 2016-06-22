@@ -1,14 +1,13 @@
 # -*- coding: utf-8 -*-
-# 贝叶斯分类器
 
 
 def bayes_classifier(data_set, categories, vec):
     """
-    贝叶斯分类器
-    :param data_set:先验数据
-    :param categories:种类
-    :param vec:目标向量
-    :return:
+    bayes classifier
+    :param data_set: training data set
+    :param categories:
+    :param vec:
+    :return: category
     """
     result_p = 0
     result_c = None
